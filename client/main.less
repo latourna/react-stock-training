@@ -1,0 +1,172 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #fafafa;
+  color: #242424;
+  margin-right: auto;
+  margin-left: auto;
+
+  a {
+    text-decoration: none !important;
+  }
+}
+
+::selection {
+  color: #414141;
+  background: #d4d4d4;
+}
+::-moz-selection {
+  color: #414141;
+  background: #d4d4d4;
+}
+
+.header {
+  padding-left: 8px;
+
+  .container {
+    max-width: 1000px;
+    margin: auto;
+
+    &::before {
+      display: table;
+      content: "";
+    }
+
+    &::after{
+      display: table;
+      clear: both;
+      content: "";
+    }
+
+    .logo {
+      width: 50px;
+      float: left;
+      margin-right: 10px;
+    }
+
+    .appName {
+      float: left;
+      font-size: 25px;
+      margin: 0;
+      font-weight: normal;
+    }
+
+    nav {
+      float: left;
+      margin-left: 25px;
+
+      a {
+        float: left;
+        padding: 7px 8px;
+      }
+    }
+  }
+
+}
+
+.introduction {
+  display: flex;
+  margin: 30px auto;
+  text-align: center;
+  font-size: 16px;
+  width: 100%;
+
+  &__content {
+    width: 100%;
+    max-width: 550px;
+    display: block;
+    margin: auto;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__description {
+    margin: 10px;
+  }
+
+  &__search {
+    margin-bottom: 5%;
+
+    input {
+      width: 90%;
+      background: none;
+      border: 0;
+      border-bottom: 2px solid #d5d5d5;
+      padding: 14px 6px;
+      color: #555;
+      font-size: 18px;
+      margin: 6px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+.feed {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  max-width: 1000px;
+  padding: 12px;
+  margin: auto;
+
+  .item {
+    @item-width: 460px;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    width: @item-width;
+    background-color: #fff;
+    overflow: hidden;
+    margin: 12px;
+    color: #2c2c2c;
+    border: 1px solid #f2f2f2;
+
+    &__content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      padding: 20px;
+
+      & > * {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+
+      hr {
+        height: 1px;
+        border: 0;
+        background: #dbdbdb;
+        margin: 3px 0;
+        width: 100%;
+      }
+
+      &__left {
+        margin-right: 16px;
+        width: 100%;
+
+        &__title {
+          font-size: 18px;
+        }
+
+        &__exchange {
+          color: #979797;
+        }
+      }
+
+      &__right {
+        text-align: right;
+        font-size: 17px;
+      }
+    }
+  }
+}
