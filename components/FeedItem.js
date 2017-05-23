@@ -2,7 +2,11 @@ import React from 'react';
 
 export default class FeedItem extends React.Component {
   static propTypes = {
-    stockValue: React.PropTypes.isRequired,
+    stockValue: React.PropTypes.shape({
+      t: React.PropTypes.string.isRequired,
+      e: React.PropTypes.string.isRequired,
+      l: React.PropTypes.string.isRequired,
+    }).isRequired,
   };
   render() {
     const stockValue = this.props.stockValue;

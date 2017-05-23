@@ -34,8 +34,6 @@ export default class Feed extends React.Component {
         this.setState({
           stockValues: res.data,
         });
-
-        console.log(this.state.stockValues);
       });
   }
 
